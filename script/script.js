@@ -11,8 +11,6 @@ function getMaxDigit(number){
 // /*Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та
 // **. Використовуйте цикл*/
   
-
-
 function getPower () {
 let a = Number(prompt("Введіть число для обчислення степені"));
 let b = Number(prompt("Введіть число для підняття у степінь"));
@@ -42,14 +40,11 @@ function countTax () {
 
 
 /*Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.*/
-
-
 function getRandomNumber () {
   let numberN = Number(prompt("Введіть значення N"));
   let numberM = Number(prompt("Введіть значення M"));
   alert(Math.floor(Math.random() * (numberM - numberN)) + numberN);
 }
-
 
 /*Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 Приклад: countLetter("а", "Асталавіста") -> 4*/
@@ -80,11 +75,9 @@ function convertCurrency() {
 }
 
 
-
 // /*Створіть функцію генерації випадкового паролю (тільки числа), довжина
 // встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124*/
-
 
 function getRandomPassword() {
   const code = prompt("Введіть довжину паролю не більше числа 8");
