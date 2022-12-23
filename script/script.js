@@ -50,15 +50,7 @@ function getRandomNumber () {
 Приклад: countLetter("а", "Асталавіста") -> 4*/
 
 
-// function countLetters(){
-//   let count = (prompt("Введіть слово"));
-//   let countDict={};
-//   for(i= 0, length = count.length; i < length; i++) {
-//       l = count.charAt(i)
-//       countDict[l] = (isNaN(countDict[l]) ? 1 : countDict[l] + 1);
-//   }
-//   alert(countDict)
-// 
+
 function countLetters() {
   word = prompt("Введіть слово");
   letter = prompt("Введіть букву");
