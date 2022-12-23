@@ -4,31 +4,32 @@
 function getMaxDigit(number){
   let maxNumber = Number(prompt("Введіть число для визначення найбільшого значення"));
   arr = Array.from(String(maxNumber), Number);
-  console.log(Math.max(...arr));
+  alert(Math.max(...arr));
 }
 
 
 // /*Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та
 // **. Використовуйте цикл*/
   
-  let a = Number(prompt("Введіть число для обчислення степені"));
-  let b = Number(prompt("Введіть число для підняття у степінь"));
-function getPower (a, b) {
+
+
+function getPower () {
+let a = Number(prompt("Введіть число для обчислення степені"));
+let b = Number(prompt("Введіть число для підняття у степінь"));
   let result = a;
   for (let i = 1; i < b; i++){
-    result *= a; }
-   return result;
+    result *= a; 
   }
-    console.log (getPower (a,b));
-
+   alert(result);
+}
 
   /*Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" ->
 "Влад", "вЛАД" -> "Влад" і так далі);*/
 
 function capFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+  alert(string.charAt(0).toUpperCase() + string.slice(1));
 }
-console.log(capFirstLetter('vlad')); // Vlad
+
 
 // /*Створити функцію, яка вираховує суму, що залишається після оплати податку від
 // зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805*/
@@ -36,51 +37,48 @@ console.log(capFirstLetter('vlad')); // Vlad
 function countTax () {
   let salary = Number(prompt("Введіть суму заробітньої плати"));
   let tax = 19.5;
-  return salary - (salary/100 *tax).toFixed(0);
+  alert(salary - (salary/100 *tax).toFixed(0));
 }
-console.log(countTax())
-
 
 
 /*Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.*/
 
-let numberN = Number(prompt("Введіть значення N"));
-let numberM = Number(prompt("Введіть значення M"));
-function getRandomNumber (numberM, numberN) {
-  return Math.floor(Math.random() * (numberM - numberN)) + numberN;
+
+function getRandomNumber () {
+  let numberN = Number(prompt("Введіть значення N"));
+  let numberM = Number(prompt("Введіть значення M"));
+  alert(Math.floor(Math.random() * (numberM - numberN)) + numberN);
 }
-console.log(getRandomNumber(numberN, numberM))
+
 
 /*Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 Приклад: countLetter("а", "Асталавіста") -> 4*/
 
 function countLetters(){
-  let count = (prompt("Введіть слово"));
+  let count = (prompt("Введіть слово, щоб порахувати скільки разів певна буква повторюється в слові"));
   let countDict={};
-
   for(x = 0, length = count.length; x < length; x++) {
       l = count.charAt(x)
       countDict[l] = (isNaN(countDict[l]) ? 1 : countDict[l] + 1);
   }
-  console.log(countDict)
+  alert(countDict);
 }
 
 // /*Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від
 // наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500
 // грн. або convertCurrency("2500UAH") -> 100$*/
 
-function convertCurrency(amount) {
+function convertCurrency() {
+  const  amount = prompt("Введіть валюту");
   let convertedAmount = 0;
   if(amount.indexOf('$') > 0) {
     convertedAmount = parseInt(amount) * 25;
   } else if (amount.indexOf('UAH') > 0) {
     convertedAmount = parseInt(amount) / 25;
   }
-  return convertedAmount;
+  alert(convertedAmount);
 }
-console.log(convertCurrency('100$'))
-console.log(convertCurrency('2500UAH'))
-console.log(convertCurrency('2500USD'))
+
 
 
 // /*Створіть функцію генерації випадкового паролю (тільки числа), довжина
@@ -88,44 +86,44 @@ console.log(convertCurrency('2500USD'))
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124*/
 
 
-function getRandomPassword(code) {
+function getRandomPassword() {
+  const code = prompt("Введіть довжину паролю не більше числа 8");
   let password = '';
   let i = code || '8';
   while(i > 0) {
     password = password + Math.floor(Math.random() * 10);
     i--;
   }
-  return password; 
+  alert (password); 
 }
-console.log(getRandomPassword())
+
 
 // Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a',
 // "blablabla") -> "blblbl"
 
-function deleteLetters(replace, word) {
+function deleteLetters() {
+    const  replace = prompt("Введіть букву");
+    const  word = prompt("Введіть слово");
   let newStr = word.replaceAll(replace, '')
-
-  return newStr;
+  alert (newStr);
 }
-console.log(deleteLetters('b', "blablabla"))
+
 
 // /*Створіть функцію, яка перевіряє, чи є слово паліндромом. Приклад:
 // isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу
 // гусеня") -> true*/
 
 
-function isPalindrome(string) {
+function isPalindrome() {
+  const string = prompt('Enter a string: ');
   const len = string.length;
   for (let i = 0; i < len / 2; i++) {
       if (string[i] !== string[len - 1 - i]) {
-          return 'It is not a palindrome';
+          alert('It is not a palindrome');
       }
   }
-  return 'It is a palindrome';
+  alert('It is a palindrome');
 }
-const string = prompt('Enter a string: ');
-const value = isPalindrome(string);
-console.log(value);
 
 
 
