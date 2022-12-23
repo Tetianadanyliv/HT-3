@@ -49,14 +49,26 @@ function getRandomNumber () {
 /*Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 Приклад: countLetter("а", "Асталавіста") -> 4*/
 
-function countLetters(){
-  let count = (prompt("Введіть слово, щоб порахувати скільки разів певна буква повторюється в слові"));
-  let countDict={};
-  for(x = 0, length = count.length; x < length; x++) {
-      l = count.charAt(x)
-      countDict[l] = (isNaN(countDict[l]) ? 1 : countDict[l] + 1);
+
+// function countLetters(){
+//   let count = (prompt("Введіть слово"));
+//   let countDict={};
+//   for(i= 0, length = count.length; i < length; i++) {
+//       l = count.charAt(i)
+//       countDict[l] = (isNaN(countDict[l]) ? 1 : countDict[l] + 1);
+//   }
+//   alert(countDict)
+// 
+function countLetters() {
+  word = prompt("Введіть слово");
+  letter = prompt("Введіть букву");
+  let count = 0
+  for (let i = 0; i < word.length; i++) {
+      if (word[i].toLowerCase() === letter.toLowerCase()) {
+          count += 1
+      }
   }
-  alert(countDict);
+  alert(count)
 }
 
 // /*Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від
@@ -74,7 +86,6 @@ function convertCurrency() {
   alert(convertedAmount);
 }
 
-
 // /*Створіть функцію генерації випадкового паролю (тільки числа), довжина
 // встановлюється користувачем або по замовчуванню = 8 символам.
 // Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124*/
@@ -91,10 +102,9 @@ function getRandomPassword() {
 }
 
 
-// Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a',
-// "blablabla") -> "blblbl"
+// Створіть функцію, яка видаляє всі букви з речення. 
 
-function deleteLetters() {
+function deleteLetter() {
     const  replace = prompt("Введіть букву");
     const  word = prompt("Введіть слово");
   let newStr = word.replaceAll(replace, '')
@@ -128,7 +138,7 @@ document.writeln (`Function№5: ${getRandomNumber}`);
 document.writeln (`Function№6: ${countLetters}`);
 document.writeln (`Function№7: ${convertCurrency}`);
 document.writeln (`Function№8: ${getRandomPassword}`);
-document.writeln (`Function№9: ${deleteLetters}`);
+document.writeln (`Function№9: ${deleteLetter}`);
 document.writeln (`Function№10: ${isPalindrome}`);
 
 
