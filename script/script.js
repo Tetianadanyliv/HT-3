@@ -2,34 +2,36 @@
 виводить найбільшу цифру в цьому числі*/
 
 function getMaxDigit(number){
-  let maxNumber = Number(prompt("Введіть число для визначення найбільшого значення "));
-  arr = Array.from(String(maxNumber), Number)
-  console.log(Math.max(...arr))
+  let maxNumber = Number(prompt("Введіть число для визначення найбільшого значення"));
+  arr = Array.from(String(maxNumber), Number);
+  console.log(Math.max(...arr));
 }
 
-/*Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та
-**. Використовуйте цикл*/
 
-function power (base, exponent) {
-  if (exponent == 0) {
-  return 1; 
-  } else {
-  return base * power(base, exponent - 1)
-}
+// /*Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та
+// **. Використовуйте цикл*/
+  
+  let a = Number(prompt("Введіть число для обчислення степені"));
+  let b = Number(prompt("Введіть число для підняття у степінь"));
+function getPower (a, b) {
+  let result = a;
+  for (let i = 1; i < b; i++){
+    result *= a; }
+   return result;
   }
-  console.log(power (2,3));
+    console.log (getPower (a,b));
+
 
   /*Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" ->
 "Влад", "вЛАД" -> "Влад" і так далі);*/
-
 
 function capFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 console.log(capFirstLetter('vlad')); // Vlad
 
-/*Створити функцію, яка вираховує суму, що залишається після оплати податку від
-зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805*/
+// /*Створити функцію, яка вираховує суму, що залишається після оплати податку від
+// зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805*/
 
 function countTax () {
   let salary = Number(prompt("Введіть суму заробітньої плати"));
@@ -63,9 +65,9 @@ function countLetters(){
   console.log(countDict)
 }
 
-/*Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від
-наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500
-грн. або convertCurrency("2500UAH") -> 100$*/
+// /*Створіть функцію, яка конвертує долари в гривні та навпаки в залежності від
+// наявності символа $ або UAH в рядку. Приклад: convertCurrency("100$") -> 2500
+// грн. або convertCurrency("2500UAH") -> 100$*/
 
 function convertCurrency(amount) {
   let convertedAmount = 0;
@@ -81,9 +83,9 @@ console.log(convertCurrency('2500UAH'))
 console.log(convertCurrency('2500USD'))
 
 
-/*Створіть функцію генерації випадкового паролю (тільки числа), довжина
-встановлюється користувачем або по замовчуванню = 8 символам.
-Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124*/
+// /*Створіть функцію генерації випадкового паролю (тільки числа), довжина
+// встановлюється користувачем або по замовчуванню = 8 символам.
+// Приклад: getRandomPassword(4) -> 1875, getRandomPassword() -> 87240124*/
 
 
 function getRandomPassword(code) {
@@ -100,16 +102,16 @@ console.log(getRandomPassword())
 // Створіть функцію, яка видаляє всі букви з речення. Приклад: deleteLetters('a',
 // "blablabla") -> "blblbl"
 
-function deleteLetters(replacer, word) {
-  let newStr = word.replaceAll(replacer, '')
+function deleteLetters(replace, word) {
+  let newStr = word.replaceAll(replace, '')
 
   return newStr;
 }
 console.log(deleteLetters('b', "blablabla"))
 
-/*Створіть функцію, яка перевіряє, чи є слово паліндромом. Приклад:
-isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу
-гусеня") -> true*/
+// /*Створіть функцію, яка перевіряє, чи є слово паліндромом. Приклад:
+// isPalyndrom("мадам") -> true, isPalyndrom("кокос") -> false, isPalyndrom("Я несу
+// гусеня") -> true*/
 
 
 function isPalindrome(string) {
@@ -128,7 +130,7 @@ console.log(value);
 
 
 document.writeln (`Function№1: ${getMaxDigit}`);
-document.writeln (`Function№2: ${power}`);
+document.writeln (`Function№2: ${getPower}`);
 document.writeln (`Function№3: ${capFirstLetter}`);
 document.writeln (`Function№4: ${countTax}`);
 document.writeln (`Function№5: ${getRandomNumber}`);
