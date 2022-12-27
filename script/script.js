@@ -16,36 +16,22 @@ let a = Number(prompt("Введіть число для обчислення с�
 let b = Number(prompt("Введіть число для підняття у степінь"));
   let result = a;
   if (b === 0) {
-   return alert(`Результат = 1`);
+    return alert(`Результат = 1`);
   } 
   for (let i = 1; i < b; i++){
     result *= a; 
-   return alert(`Результат = ${result}`);
+    return alert(`Результат = ${result}`);
   }
   for (let i = 1; i > b; i++){
     result = 1/a; 
-   return alert(`Результат = ${result}`);
+    return alert(`Результат = ${result}`);
   }
 }
-
-
-// function getPower () {
-//   let a = Number(prompt("Введіть число для обчислення степені"));
-//   let b = Number(prompt("Введіть число для підняття у степінь"));
-//     let result = a;
-//     for (let i = 1; i < b; i++){
-//       result *= a; 
-//     }
-//      alert(result);
-//   }
-  
-
 
 
   /*Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" ->
 "Влад", "вЛАД" -> "Влад" і так далі);*/
  
-
 function capFirstLetter(string) {
   string = prompt("Введіть своє ім'я").toLowerCase();
   const Namefix = string[0].toUpperCase() + string.slice(1);
@@ -65,18 +51,16 @@ function countTax () {
 
 
 /*Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.*/
+
 function getRandomNumber () {
   let numberN = Number(prompt("Введіть значення N"));
   let numberM = Number(prompt("Введіть значення M"));
-  
   let rendomResalt = (Math.floor(Math.random() * (numberM - numberN)) + numberN);
   alert (`Випадкове число ${rendomResalt}`)
 }
 
 /*Створити функцію, яка рахує скільки разів певна буква повторюється в слові.
 Приклад: countLetter("а", "Асталавіста") -> 4*/
-
-
 
 function countLetters() {
   word = prompt("Введіть слово");
@@ -104,8 +88,8 @@ function convertCurrency() {
     convertedAmount = parseInt(amount) / 25;
     alert (`The exchange amount is ${convertedAmount} $`)
   }
-  else {
-   return alert (convertedAmount = 'Your currency is invalid!');
+    else {
+    return alert (convertedAmount = 'Your currency is invalid!');
   }
 }
 
@@ -119,12 +103,11 @@ function getRandomPassword() {
   let password = '';
   let i = code || '8';
   while(i > 0) {
-    password = password + Math.floor(Math.random() * 10);
-    i--;
+  password = password + Math.floor(Math.random() * 10);
+  i--;
   }
   alert (password); 
 }
-
 
 // Створіть функцію, яка видаляє всі букви з речення. 
 
