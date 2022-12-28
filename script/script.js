@@ -23,14 +23,13 @@ let b = Number(prompt("Введіть число для підняття у ст
     result *= a; 
    } 
    return alert(`Результат = ${result}`);
-  } 
-  if (b < 0) {
-  for (let i = -1; i > b; i--){
-    result = (1/(result*a)); 
-  }
-    return alert(`Результат = ${result}`);
-  }
-}
+  } if (b < 0)
+  for (let i = -1; i > b; i--)
+    {
+      result= result*a; 
+    }
+      return alert(`Результат = ${1/result}`);
+  
 
   /*Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" ->
 "Влад", "вЛАД" -> "Влад" і так далі);*/
@@ -134,8 +133,5 @@ function isPalindrome() {
         return alert("It's not a palindrom");
       } else return alert("It is a palindrom");
     }
-  };
-
-
-
-
+  }
+}
