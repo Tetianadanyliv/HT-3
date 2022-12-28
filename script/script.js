@@ -18,16 +18,19 @@ let b = Number(prompt("Введіть число для підняття у ст
   if (b === 0) {
     return alert(`Результат = 1`);
   } 
-  for (let i = 1; i < b; i++){
+  if (b > 0) {
+  for (let i = 1; i < b; i++) {
     result *= a; 
-    return alert(`Результат = ${result}`);
+   } 
+   return alert(`Результат = ${result}`);
+  } 
+  if (b < 0) {
+  for (let i = -1; i > b; i--){
+    result = (1/(result*a)); 
   }
-  for (let i = 1; i > b; i++){
-    result = 1/a; 
     return alert(`Результат = ${result}`);
   }
 }
-
 
   /*Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" ->
 "Влад", "вЛАД" -> "Влад" і так далі);*/
@@ -134,17 +137,5 @@ function isPalindrome() {
   };
 
 
-
-
-document.writeln (`Function№1: ${getMaxDigit}`);
-document.writeln (`Function№2: ${getPower}`);
-document.writeln (`Function№3: ${capFirstLetter}`);
-document.writeln (`Function№4: ${countTax}`);
-document.writeln (`Function№5: ${getRandomNumber}`);
-document.writeln (`Function№6: ${countLetters}`);
-document.writeln (`Function№7: ${convertCurrency}`);
-document.writeln (`Function№8: ${getRandomPassword}`);
-document.writeln (`Function№9: ${deleteLetter}`);
-document.writeln (`Function№10: ${isPalindrome}`);
 
 
