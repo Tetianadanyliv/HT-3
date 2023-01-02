@@ -11,7 +11,7 @@ function getMaxDigit(number){
 // /*Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та
 // **. Використовуйте цикл*/
   
-function getPower () {
+function getPower() {
 let a = Number(prompt("Введіть число для обчислення степені"));
 let b = Number(prompt("Введіть число для підняття у степінь"));
   let result = a;
@@ -20,16 +20,17 @@ let b = Number(prompt("Введіть число для підняття у ст
   } 
   if (b > 0) {
   for (let i = 1; i < b; i++) {
-    result *= a; 
+      result *= a; 
    } 
-   return alert(`Результат = ${result}`);
-  } if (b < 0)
+      return alert(`Результат = ${result}`);
+  } 
+  if (b < 0)
   for (let i = -1; i > b; i--)
     {
       result= result*a; 
     }
       return alert(`Результат = ${1/result}`);
-  
+}
 
   /*Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" ->
 "Влад", "вЛАД" -> "Влад" і так далі);*/
@@ -44,7 +45,7 @@ function capFirstLetter(string) {
 // /*Створити функцію, яка вираховує суму, що залишається після оплати податку від
 // зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805*/
 
-function countTax () {
+function countTax() {
   let salary = Number(prompt("Введіть суму заробітньої плати"));
   let tax = 19.5;
   let salarytax = salary-(salary/100 *tax).toFixed(0);
@@ -54,7 +55,7 @@ function countTax () {
 
 /*Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M.*/
 
-function getRandomNumber () {
+function getRandomNumber() {
   let numberN = Number(prompt("Введіть значення N"));
   let numberM = Number(prompt("Введіть значення M"));
   let rendomResalt = (Math.floor(Math.random() * (numberM - numberN)) + numberN);
@@ -65,12 +66,12 @@ function getRandomNumber () {
 Приклад: countLetter("а", "Асталавіста") -> 4*/
 
 function countLetters() {
-  word = prompt("Введіть слово");
-  letter = prompt("Введіть букву");
+  const word = prompt("Введіть слово");
+  const letter = prompt("Введіть букву");
   let count = 0
-  for (let i = 0; i < word.length; i++) {
-      if (word[i].toLowerCase() === letter.toLowerCase()) {
-          count += 1
+    for (let i = 0; i < word.length; i++) {
+    if (word[i].toLowerCase() === letter.toLowerCase()) {
+        count += 1;
       }
   }
   alert(count)
@@ -114,8 +115,8 @@ function getRandomPassword() {
 // Створіть функцію, яка видаляє всі букви з речення. 
 
 function deleteLetter() {
-    const  replace = prompt("Введіть букву");
-    const  word = prompt("Введіть слово");
+  const  replace = prompt("Введіть букву");
+  const  word = prompt("Введіть слово");
   let newStr = word.replaceAll(replace, '')
   alert (newStr);
 }
@@ -129,9 +130,8 @@ function isPalindrome() {
   const string = prompt('Enter a string: ');
   const len = string.length;
   for (let i = 0; i < len/2; i++) {
-      if (string[i] !== string[len - 1 - i]) {
-        return alert("It's not a palindrom");
-      } else return alert("It is a palindrom");
-    }
+  if (string[i] !== string[len - 1 - i]) {
+  return alert("It's not a palindrome");
+    } else return alert("It is a palindrome");
   }
 }
